@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Chewy&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+        <script src="app.js" async defer></script>
+    </head>
+    <nav>
+        <ul>   <!--Creates a dropdown menu-->
+            <li class="menu-button" onclick=DisplayDropdown()><a href="#"><img class ="menu" src="pictures/menu.png"></a></li>
+            <li><a href="#"><img class ="logo" src ="pictures/logo.png"></a></li>
+            <li class="chewy-regular hide"><a href="#">About Us</a></li>
+            <li class="chewy-regular hide"><a href="#">Support</a></li>
+            <li class="chewy-regular hide"><a href="index.html">Shopping</a></li>
+            <li><a href="#"><img class ="cart" src="pictures/cart.png"></a></li>
+            <li id="buttonlog" class ='#'><a href="login-page.html" target="_self" class="chewy-regular">Login</a></li>
+            <li id="profile" class="# invisible"><a href="#"><img class ="profile" src="pictures/profile.png"></a></li> <!--Not working will come back-->
+        </ul>
+
+        <ul class="dropdown">  
+            <li onclick=CloseDropdown()><a href="#"><img class ="menu" src="pictures/close.png"></a></li>
+            <li class="chewy-regular"><a href="#">About Us</a></li>
+            <li class="chewy-regular"><a href="#">Support</a></li>
+            <li class="chewy-regular"><a href="index.html">Shopping</a></li>
+        </ul>
+    </nav>
+    
+
+    <body>
+        <div class="box">
+            <form class="search">
+                <button type="submit"><img src="pictures/search.png" id="search"></button>
+                <input type="text" placeholder="Search...">
+            </form>
+        </div>
+    </body>
+
+    <footer class="footer">
+        <ul>
+            <li class="chewy-regular"><a href="#">About Us</a></li>
+            <li class="chewy-regular"><a href="#">Support</a></li>
+            <li class="chewy-regular"><a href="index.html">Shopping</a></li>
+        </ul>
+    
+</footer>
+</html>
