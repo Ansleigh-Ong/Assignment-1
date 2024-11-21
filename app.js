@@ -27,12 +27,10 @@ function Login(){
 }
 
 function checklogin(){
-    const loginbutton = document.getElementById('.buttonlog')
-    const profileicon = document.getElementById('.profile')
+    document.querySelector('#buttonlog').classList.add('invisible')
+    document.querySelector('#profile').classList.remove('invisible')
 
-    buttonlog.addClass('invisible')
-    profileicon.removeClass('invisible')
-} /*Not working*/
+}
 
 
 

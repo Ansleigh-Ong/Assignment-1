@@ -3,6 +3,9 @@
     font-weight: 400;
     font-style: normal;
   }
+body::-webkit-scrollbar{
+    display: none;
+}
 
 *{
     margin:0;
@@ -10,9 +13,7 @@
     box-sizing: border-box;
 }
 
-.invisible{
-    display:none;
-}
+
 
 nav{
     min-height: 100%;
@@ -33,10 +34,6 @@ nav{
 .cart{
     width:35px;height:35px;
     padding:7px 5px;
-}
-
-.profile{
-    width:35px;height:35px;
 }
 
 nav{
@@ -73,6 +70,12 @@ nav a:hover{
 
 nav li:nth-child(2){
     margin-right: auto;
+}
+
+
+.profile{
+    width:35px;
+    height:35px;
 }
 
 .dropdown{
@@ -123,10 +126,9 @@ main{
     justify-content: flex-start;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #789B85;
-    padding: 150px;
     position: relative;
     overflow: hidden;
-    flex-shrink: 1;
+    flex-shrink: 0;
 }
 
 .container{
@@ -139,7 +141,6 @@ main{
     display: flex;
     flex-direction: column; 
     overflow: visible;
-    flex-shrink: 0;
 }
 
 
@@ -154,9 +155,12 @@ main{
     height: 100%;
     max-width: 400px;
     max-height: 500px;
-    flex-shrink: 0;
+    min-width: 200px;
+    left:10%;
 }
 
+
+/*Sets animated gradient border for the form*/
 @property --angle{
     syntax: "<angle>";
     initial-value: 0deg;
@@ -190,7 +194,7 @@ to{
 }
 
 }
-
+/*#################################################*/
 
 .circle1{
     position: absolute;
@@ -246,6 +250,7 @@ to{
     height: 100%;
     max-width: 400px;
     max-height: 500px;
+    min-width:300px;
 }
 
 .container header, .container header{
@@ -291,6 +296,15 @@ to{
 
 .form button[type="button"]:hover{
     background-color: #d1d1d1;
+}
+
+@media (max-width: 450px) {
+    .login{
+        left:0;
+    }
+    .logo{
+        display:none
+    }
 }
 
 /*End of Login/SignUp page*/
@@ -417,4 +431,8 @@ to{
 .footer a:hover{
     background-color: rgb(213, 213, 213);
     text-decoration: underline;
+}
+
+.invisible{
+    display:none;
 }
