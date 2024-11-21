@@ -22,4 +22,17 @@ function Login(){
 
     const singup = document.querySelector('.sign')
     singup.style.display = 'none'
+
+    
 }
+
+function checklogin(){
+    const loginbutton = document.getElementById('.buttonlog')
+    const profileicon = document.getElementById('.profile')
+
+    buttonlog.addClass('invisible')
+    profileicon.removeClass('invisible')
+} /*Not working*/
+
+
+

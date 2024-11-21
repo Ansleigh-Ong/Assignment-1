@@ -13,26 +13,28 @@
         <link href="https://fonts.googleapis.com/css2?family=Chewy&display=swap" rel="stylesheet">
         <script src="app.js" async defer></script>
     </head>
+
+    <nav>
+        <ul>   <!--Creates a dropdown menu-->
+            <li class="menu-button" onclick=DisplayDropdown()><a href="#"><img class ="menu" src="pictures/menu.png"></a></li>
+            <li><a href="#"><img class ="logo" src ="pictures/logo.png"></a></li>
+            <li class="chewy-regular hide"><a href="#">About Us</a></li>
+            <li class="chewy-regular hide"><a href="#">Support</a></li>
+            <li class="chewy-regular hide"><a href="index.html">Shopping</a></li>
+            <li><a href="#"><img class ="cart" src="pictures/cart.png"></a></li>
+            <li id="buttonlog" class ='#'><a href="login-page.html" target="_self" class="chewy-regular">Login</a></li>
+            <li id="profile" class="# invisible"><a href="#"><img class ="profile" src="pictures/profile.png"></a></li> <!--Not working will come back-->
+        </ul>
+
+        <ul class="dropdown">  
+            <li onclick=CloseDropdown()><a href="#"><img class ="menu" src="pictures/close.png"></a></li>
+            <li class="chewy-regular"><a href="#">About Us</a></li>
+            <li class="chewy-regular"><a href="#">Support</a></li>
+            <li class="chewy-regular"><a href="index.html">Shopping</a></li>
+        </ul>
+    </nav>
+
     <body>
-        <nav>
-            <ul>   <!--Creates a dropdown menu-->
-                <li class="menu-button" onclick=DisplayDropdown()><a href="#"><img class ="menu" src="pictures/menu.png"></a></li>
-                <li><a href="#"><img class ="logo" src ="pictures/logo.png"></a></li>
-                <li class="chewy-regular hide"><a href="#">About Us</a></li>
-                <li class="chewy-regular hide"><a href="#">Support</a></li>
-                <li class="chewy-regular hide"><a href="#">Shopping</a></li>
-                <li><a href="#"><img class ="cart" src="pictures/cart.png"></a></li>
-    
-            </ul>
-
-            <ul class="dropdown">  
-                <li onclick=CloseDropdown()><a href="#"><img class ="menu" src="pictures/close.png"></a></li>
-                <li class="chewy-regular"><a href="#">About Us</a></li>
-                <li class="chewy-regular"><a href="#">Support</a></li>
-                <li class="chewy-regular"><a href="#">Shopping</a></li>
-            </ul>
-        </nav>
-
         <main class="loginpage"> <!--Login Page-->
             <section class="login">
                 <div class="container">
@@ -41,7 +43,7 @@
                         <input type="email" placeholder="Enter email">
                         <input type="password" placeholder="Enter password">
                         <p>Don't have an account? <span onclick=Signup()><a href="#">Sign up</a></span> now!</p>
-                        <button type="submit">Submit</button>
+                        <button type="button" onclick=checklogin()>Log In</button>
                     </form>
                     
                 </div>
@@ -58,7 +60,7 @@
                         <input type="password" placeholder="Enter password">
                         <input type="password" placeholder="Enter password again">
                         <p>Have an account? <span onclick=Login()><a href="#">Log In</a></span> now!</p>
-                        <button type="submit">Submit</button>
+                        <button type="button">Submit</button>
                     </form>
                 </div>
                 <div class="circle1"></div>
@@ -70,7 +72,14 @@
         </main>
 
         
-        <footer class="footer">hello</footer>
+        <footer class="footer">
+                <ul>
+                    <li class="chewy-regular"><a href="#">About Us</a></li>
+                    <li class="chewy-regular"><a href="#">Support</a></li>
+                    <li class="chewy-regular"><a href="index.html">Shopping</a></li>
+                </ul>
+            
+        </footer>
 
     </body>
 </html>
