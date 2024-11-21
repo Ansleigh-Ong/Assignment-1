@@ -17,22 +17,22 @@
     </head>
     <body>
         <nav>
-            <ul>   <!--Creates a dropdown menu-->
+            <ul id="no_dropdown">   <!--Creates a dropdown menu-->
                 <li class="menu-button" onclick=DisplayDropdown()><a href="#"><img class ="menu" src="pictures/menu.png" alt="menu"></a></li>
                 <li><a href="index.html"><img class ="logo" src ="pictures/logo.png" alt="Cloverene"></a></li>
-                <li class="chewy-regular hide"><a href="#">About Us</a></li>
-                <li class="chewy-regular hide"><a href="#">Support</a></li>
+                <li class="chewy-regular hide"><a href="about-us.html">About Us</a></li>
+                <li class="chewy-regular hide"><a href="support.html">Support</a></li>
                 <li class="chewy-regular hide"><a href="index.html">Shopping</a></li>
                 <li><a href="#"><img class ="cart" src="pictures/cart.png" alt="Cart"></a></li>
                 <li id="profile" class="# invisible"><a href="#"><img class ="profile" src="pictures/profile.png" alt="profile"></a></li>
-                <li id="buttonlog" class ='#'><a href="login-page.html" target="_self" class="chewy-regular">Login</a></li>
+                <li id="buttonlog" class ='#'><a href="login-page.html" class="chewy-regular">Login</a></li>
             </ul>
 
             <ul class="dropdown">  
                 <li onclick=CloseDropdown()><a href="#"><img class ="menu" src="pictures/close.png" alt="close"></a></li>
                 <li><a href="index.html"><img class ="logo" src ="pictures/logo.png" alt="Cloverene"></a></li>
-                <li class="chewy-regular"><a href="#">About Us</a></li>
-                <li class="chewy-regular"><a href="#">Support</a></li>
+                <li class="chewy-regular"><a href="about-us.html">About Us</a></li>
+                <li class="chewy-regular"><a href="support.html">Support</a></li>
                 <li class="chewy-regular"><a href="index.html">Shopping</a></li>
             </ul>
         </nav>
@@ -62,7 +62,7 @@
                         <input type="password" placeholder="Enter password">
                         <input type="password" placeholder="Enter password again">
                         <p>Have an account? <span onclick=Login()><a href="#">Log In</a></span> now!</p>
-                        <button type="button">Submit</button>
+                        <button type="button" onclick=checklogin()>Submit</button>
                     </form>
                 </div>
                 <div class="circle1"></div>
@@ -76,8 +76,8 @@
         
         <footer class="footer">
                 <ul>
-                    <li class="chewy-regular"><a href="#">About Us</a></li>
-                    <li class="chewy-regular"><a href="#">Support</a></li>
+                    <li class="chewy-regular"><a href="about-us.html">About Us</a></li>
+                    <li class="chewy-regular"><a href="support.html">Support</a></li>
                     <li class="chewy-regular"><a href="index.html">Shopping</a></li>
                 </ul>
             

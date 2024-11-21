@@ -3,6 +3,16 @@
     font-weight: 400;
     font-style: normal;
   }
+
+.playball-regular {
+    font-family: "Playball", cursive;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 40px;
+}
+  
+
+  
 body::-webkit-scrollbar{
     display: none;
 }
@@ -111,6 +121,12 @@ nav li:nth-child(2){
     }
     .dropdown{
         width:100%
+    }
+}
+
+@media (max-width: 450px) {
+    #no_dropdown .logo{
+        display:none;
     }
 }
 
@@ -232,13 +248,6 @@ to{
 
 }
 
-
-@media (max-width: 600px){
-    .bigcircle{
-        display: none;
-    }
-}
-
 .sign{
     position: relative;
     background-color: white;
@@ -251,6 +260,7 @@ to{
     max-width: 400px;
     max-height: 500px;
     min-width:300px;
+    left:10%;
 }
 
 .container header, .container header{
@@ -298,14 +308,19 @@ to{
     background-color: #d1d1d1;
 }
 
-@media (max-width: 450px) {
-    .login{
-        left:0;
-    }
-    .logo{
-        display:none
+@media (max-width: 600px){
+    .bigcircle{
+        display: none;
     }
 }
+
+@media (max-width: 450px) {
+    .login, .sign{
+        left:10px;
+    }
+}
+
+
 
 /*End of Login/SignUp page*/
 
@@ -400,6 +415,37 @@ to{
 
 
 /*End of shopping page*/
+
+/*Start of About Us page*/
+
+.banner-box{
+    width:100vw;
+    height:40vh;
+    background-image: url("pictures/flower\ background.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display:flex;
+    align-items: center;
+}
+
+.sloganbox{
+    width:30%;
+    height:70%;
+    min-height: fit-content;
+    min-width: 250px;
+    background-color: rgba(255, 255, 255, 0.6);
+    margin-left: 9%;
+    border-radius: 15%;
+    align-content: center;
+}
+
+.sloganbox h1{
+    padding:15px;
+}
+
+
+/*End of About Us page */
 
 
 .footer{
