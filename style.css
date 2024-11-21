@@ -391,9 +391,9 @@ to{
 }
 
 .cardbox img{
-    width:100%;
+    width:30vh;
     max-width: 40vh;
-    height:40%;
+    height:35vh;
     max-height: 100%;
 
 }
@@ -403,7 +403,7 @@ to{
 
 
 .footer{
-    height: 75px;   
+    height: auto;   
     background-color: black;
     color: white;
     text-align: center;
