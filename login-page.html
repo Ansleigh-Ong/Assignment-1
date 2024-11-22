@@ -15,11 +15,11 @@
         <link href="https://fonts.googleapis.com/css2?family=Chewy&display=swap" rel="stylesheet">
         <script src="app.js" async defer></script>
     </head>
-    <body>
+    <body class=".login">
         <nav>
             <ul id="no_dropdown">   <!--Creates a dropdown menu-->
                 <li class="menu-button" onclick=DisplayDropdown()><a href="#"><img class ="menu" src="pictures/menu.png" alt="menu"></a></li>
-                <li><a href="index.html"><img class ="logo" src ="pictures/logo.png" alt="Cloverene"></a></li>
+                <li><a href="index.html" id ="logo"><img class="logo" src ="pictures/logo.png" alt="Cloverene"></a></li>
                 <li class="chewy-regular hide"><a href="about-us.html">About Us</a></li>
                 <li class="chewy-regular hide"><a href="support.html">Support</a></li>
                 <li class="chewy-regular hide"><a href="index.html">Shopping</a></li>
@@ -37,10 +37,10 @@
             </ul>
         </nav>
 
-        <main class="loginpage"> <!--Login Page-->
+        <main class="loginpage main"> <!--Login Page-->
             <section class="login">
                 <div class="container">
-                    <header><u>Log In</u></header>
+                    <header class="fugaz-one-regular"><u>Log In</u></header>
                     <form class="form">
                         <input type="email" placeholder="Enter email">
                         <input type="password" placeholder="Enter password">
@@ -56,7 +56,7 @@
                         
             <section class="sign"> <!--Switches to Sign Up page if user clicks from Login page-->
                 <div class="container">
-                    <header><u>Sign Up</u></header>
+                    <header class="fugaz-one-regular"><u>Sign Up</u></header>
                     <form class="form">
                         <input type="email" placeholder="Enter email">
                         <input type="password" placeholder="Enter password">
@@ -69,7 +69,7 @@
                 <div class="circle2"></div>
             </section>
 
-            <div class="bigcircle"></div>
+            <picture class="bigcircle"></picture>
             
         </main>
 

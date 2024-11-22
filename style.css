@@ -10,7 +10,11 @@
     font-style: normal;
     font-size: 40px;
 }
-  
+.fugaz-one-regular {
+    font-family: "Fugaz One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
 
   
 body::-webkit-scrollbar{
@@ -22,7 +26,6 @@ body::-webkit-scrollbar{
     padding:0;
     box-sizing: border-box;
 }
-
 
 
 nav{
@@ -125,16 +128,16 @@ nav li:nth-child(2){
 }
 
 @media (max-width: 450px) {
-    #no_dropdown .logo{
+    #no_dropdown #logo{
         display:none;
     }
 }
-
+/*End universal nav bar*/
 
 
 
 /*For the body of login and sign up page*/
-main{
+.main{
     height: 100vh;
     display: flex;
     flex-direction: row;
@@ -264,7 +267,7 @@ to{
 }
 
 .container header, .container header{
-    font-size: 2rem;
+    font-size: 40px;
 }
 
 .container .form,.container .form{
@@ -327,16 +330,16 @@ to{
 
 /*Start of Shopping Page*/
 
-#search{
-    width:25px;
-    height: 25px;
-}
-
 .box{
     width:100%;
     padding:30px;
     display:flex;
     justify-content: center;
+}
+
+#search{
+    width:25px;
+    height: 25px;
 }
 
 .search{
@@ -442,6 +445,56 @@ to{
 
 .sloganbox h1{
     padding:15px;
+}
+
+
+.about-us{
+    margin:5% 10%;
+    background-color: grey;
+    display: flex;
+    flex-direction: column;
+    font-size: 20px;
+    width:80vw;
+    height:1000px;
+}
+
+.display-box{
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    height:100%;
+    justify-content: center;
+}
+
+.display-box:nth-child(2),.display-box:nth-child(4){
+    flex-direction: row-reverse;
+}
+
+.split{
+    
+    flex-basis: 45%;
+    display:flex;
+    flex-direction: column;
+    padding:2%;
+}
+
+.split img {
+    max-width: 100%;
+    height: 100%;
+    background-color: white;
+
+}
+
+@media screen and (max-width: 576px){
+    .split{
+      flex:0 95%;
+    }
+    .split img{
+        height:30vh;
+    }
+    .about-us{
+        height:fit-content;
+    }
 }
 
 
