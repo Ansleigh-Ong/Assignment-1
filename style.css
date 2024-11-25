@@ -21,6 +21,11 @@ body::-webkit-scrollbar{
     display: none;
 }
 
+html{
+    scrollbar-width: none;
+    scrollbar-color: transparent,transparent;
+}
+
 *{
     margin:0;
     padding:0;
@@ -516,10 +521,10 @@ to{
     height:100%;
     min-width: 200px;
     min-height: 250px;
-    max-height: 350px;
     display: flex;
     flex-direction: row;
     overflow-x: scroll;
+    scroll-snap-type: x mandatory;
     gap:8px;
 }
 
@@ -527,19 +532,59 @@ to{
     display: none;
 }
 
+.review-container{
+    display:flex;
+    flex-direction: row;
+    width:100%;
+    height: 100%;
+    max-height: 316px;
+}
+
+.review-container button[type="button"]{
+    width:25px;
+    height: 10%;
+    min-width: fit-content;
+    min-height: 100px;
+    align-self: center;
+    background-color: #F7EBD5;
+    border-radius: 20%;
+    font-size: 20px;
+}
+
 .review{
     background-color: white;
-    width:40%;
-    height:100%;
+    width:10%;
+    height: 100%;
     min-width: 250px;
     min-height: 250px;
-    max-height: 350px;
+    max-height: 300px;
     padding: 10px;
     border-radius: 5%;
     border: 2px solid black;
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    scroll-snap-align: start;
+    box-shadow: 0 6px 0px 0 rgba(0,0,0,0.3);
 }
 
+.review-header{
+    display: flex;
+    align-items: center;
+}
+
+.review img{
+    width:50px;
+    height: 50px;
+}
+
+.review h3{
+    font-size: 35px;
+    clear:both;
+    color: 	#ffe234;
+}
+
+.review blockquote{
+    clear: both;
+    padding-top:10px;
+}
 
 /*End of About Us page */
 
