@@ -7,4 +7,12 @@ Design Idea: The website is going to be for a flower shop brand, allowing Custom
 Acknowledgements:
 rawpixel. (n.d.). Pink cosmos field sky landscape outdoors. about spring iphone wallpaper, spring wallpaper, flower iphone wallpaper, wallpaper, and nature 14379801. pinterest. rawpixel. Retrieved November 14, 2024, from https://www.pinterest.com/pin/842876886540812253/.
 
+https://pixabay.com/photos/bunch-of-flowers-bouquet-of-roses-3158351/
+
+https://pixabay.com/photos/still-life-garden-backyard-shovel-52785/
+
+https://pixabay.com/photos/flower-cut-flowers-bunch-of-flowers-3390276/
+
+https://www.pinterest.com/pin/11681280278745099/
+
 Icons and Fonts obtained from https://fonts.google.com/icons
