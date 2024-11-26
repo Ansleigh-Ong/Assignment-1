@@ -1,3 +1,6 @@
+//Login system for nav bar (checks if user is still log in or not)
+var login = localStorage.getItem('login') === 'true';
+
 function DisplayDropdown(){
     const side = document.querySelector('.dropdown')
     side.style.display = 'flex'
@@ -21,22 +24,32 @@ function Login(){
     login.style.display = 'flex'
 
     const singup = document.querySelector('.sign')
-    singup.style.display = 'none'
-
-    
+    singup.style.display = 'none'  
 }
 
-var login = localStorage.getItem('login') === 'true';
+
+document.querySelector('#profile').addEventListener('click', function(){
+    document.querySelector('#signout').classList.remove('invisible')
+})
+
+document.querySelector('#logout').addEventListener('click', function(){
+    document.querySelector('#buttonlog').classList.remove('invisible')
+    document.querySelector('#profile').classList.add('invisible')
+    document.querySelector('#signout').classList.add('invisible')
+    localStorage.setItem('login','false')
+  
+})
 
 function setlogin(){
     document.querySelector('#buttonlog').classList.add('invisible')
     document.querySelector('#profile').classList.remove('invisible')
     localStorage.setItem('login','true')
+
 }
 
 function checklogin(){
-    if (!login){
-        setlogin()
+    if (login === false){
+        return;
     }
     else{
         document.querySelector('#buttonlog').classList.add('invisible')
@@ -44,7 +57,10 @@ function checklogin(){
     }
 
 }
+// End of nav bar interaction
 
+
+//Start of about us section
 function next(container,scrolldist){
     container.scrollBy({left: scrolldist, behavior: "smooth"})
 }
@@ -62,6 +78,7 @@ document.querySelector('#left-button').addEventListener('click', function(){
     const containers = document.querySelector('.review-box')
     back(containers,-200);
 })
+//use for review scrolling
 
 
 var dict_stars ={
@@ -72,7 +89,7 @@ var dict_stars ={
     '5star':'★★★★★',
 }
 
-
+//get user reviews and saves them 
 var dict_rating =JSON.parse(localStorage.getItem('dict_rating')) || {
     'Alicers_131' : {
         'Rating': '4star',
@@ -104,6 +121,7 @@ var dict_rating =JSON.parse(localStorage.getItem('dict_rating')) || {
     },
 }
 
+//Shows the reviews
 function showreviews(){
     
     const container = document.querySelector('.review-box')
@@ -130,6 +148,7 @@ function showreviews(){
 }
 showreviews()
 
+//Review form
 function GetReview(){
     const container = document.querySelector('.review-box')
     const last_child = container.lastElementChild;
@@ -173,6 +192,5 @@ function GetReview(){
         showreviews();
         localStorage.setItem('dict_rating',JSON.stringify(dict_rating));
     })
-
-
 }
+//End of about us section

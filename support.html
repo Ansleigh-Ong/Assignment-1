@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Support Page</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Chewy&family=Fugaz+One&family=Playball&display=swap" rel="stylesheet">
+        <script src="app.js" async defer></script>
+    </head>
+    <body onload=checklogin()>
+        <nav class="universal_nav">
+            <ul id="no_dropdown">   <!--Creates a dropdown menu-->
+                <li class="menu-button" onclick=DisplayDropdown()><a href="#"><img class ="menu" src="pictures/menu.png" alt="menu"></a></li>
+                <li><a href="index.html" id ="logo"><img class="logo" src ="pictures/logo.png" alt="Cloverene"></a></li>
+                <li class="chewy-regular hide"><a href="about-us.html">About Us</a></li>
+                <li class="chewy-regular hide"><a href="support.html">Support</a></li>
+                <li class="chewy-regular hide"><a href="index.html">Shopping</a></li>
+                <li><a href="#"><img class ="cart" src="pictures/cart.png" alt="Cart"></a></li>
+                <li id="buttonlog" class =''><a href="login-page.html" class="chewy-regular">Login</a></li>
+                <li id="profile" class="# invisible"><a href="#" ><img class ="profile" src="pictures/profile.png" alt="profile"></a></li>
+                
+            </ul>
+
+            <div id="signout" class="log-out invisible">
+                <a href="#" id='logout' class="fugaz-one-regular">Log Out</a>
+            </div>
+
+            <ul class="dropdown">  
+                <li onclick=CloseDropdown()><a href="#"><img class ="menu" src="pictures/close.png" alt="close"></a></li>
+                <li><a href="index.html"><img class ="logo" src ="pictures/logo.png" alt="Cloverene"></a></li>
+                <li class="chewy-regular"><a href="about-us.html">About Us</a></li>
+                <li class="chewy-regular"><a href="support.html">Support</a></li>
+                <li class="chewy-regular"><a href="index.html">Shopping</a></li>
+            </ul>
+        </nav>
