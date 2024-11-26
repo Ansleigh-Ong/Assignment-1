@@ -22,6 +22,7 @@
 }
 
   
+
 body::-webkit-scrollbar{
     display: none;
 }
@@ -36,7 +37,6 @@ html{
     padding:0;
     box-sizing: border-box;
 }
-
 
 nav{
     min-height: 100%;
@@ -99,6 +99,22 @@ nav li:nth-child(2){
 .profile{
     width:35px;
     height:35px;
+    position: relative;
+}
+
+.log-out{
+    z-index: 999;
+    position: absolute;
+    right:1%;
+    top:8%;
+    background-color: white;
+    width: 20%;
+    height:70px;
+    box-shadow:inset 0 6px 0px 0 rgba(0,0,0,0.3);
+}
+
+.log-out a{
+    color:red;
 }
 
 .dropdown{
@@ -645,6 +661,13 @@ to{
 
 /*End of About Us page */
 
+
+/*Start of Customer Support*/
+
+
+
+
+/*End of Customer Support*/
 
 .footer{
     height: auto;   
