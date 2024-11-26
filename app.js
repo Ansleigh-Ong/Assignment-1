@@ -26,10 +26,22 @@ function Login(){
     
 }
 
-function checklogin(){
-    localStorage.setItem
+var login = localStorage.getItem('login') === 'true';
+
+function setlogin(){
     document.querySelector('#buttonlog').classList.add('invisible')
     document.querySelector('#profile').classList.remove('invisible')
+    localStorage.setItem('login','true')
+}
+
+function checklogin(){
+    if (!login){
+        setlogin()
+    }
+    else{
+        document.querySelector('#buttonlog').classList.add('invisible')
+        document.querySelector('#profile').classList.remove('invisible')
+    }
 
 }
 
@@ -118,8 +130,6 @@ function showreviews(){
 }
 showreviews()
 
-//document.querySelector('.review-add-button').addEventListener('click',GetReview())
-
 function GetReview(){
     const container = document.querySelector('.review-box')
     const last_child = container.lastElementChild;
@@ -165,11 +175,4 @@ function GetReview(){
     })
 
 
-}
-
-function AddReview(username,rating,textreview){
-    dict_rating[username] = {
-        'Rating':rating,
-        'Comment': textreview,
-    }
 }
