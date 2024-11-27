@@ -696,7 +696,7 @@ to{
     font-size: 20px;
     margin-top:10%;
     margin-left: 10%;
-    height:60vh;
+    height:40vh;
 }
 
 .FAQ-list{
@@ -721,20 +721,59 @@ to{
 
 
 .faq-section{
-    margin-left: 10%;
+    padding: 4em;
 }
 
 .faq{
     margin-left: 5%;
+    list-style: none;
 }
 
+.faq li{
+    background: #dcdcdc;
+    border-bottom: 2px solid #777777;
+}
 
+.question{
+    font-weight: 900;
+    font-size:20px;
+    padding: 1em 0;
+    border-left: 10px solid #dcdcdc;
+    cursor: pointer;
+}
 
+.question:hover, .question:hover .arrow{
+    border-left-color:#789B85;
+}
 
+.arrow{
+    display: inline-block;
+    margin:0 10px;
+    width:10;
+    height:0;
+    border-top:6px solid transparent;
+    border-left:12px solid #5ac575;
+    border-bottom: 6px solid transparent;
+    transition: 0.3s;
+}
 
+.faq p{
+    color:rgb(119, 118, 92);
+    line-height: 25px;
+    padding:0px 20px;
+}
 
+.answer{
+    overflow: hidden;
+    height: 0;
+}
 
-
+.answer-open{
+    height: initial;
+}
+.arrow-rotate{
+    transform: rotate(90deg);
+}
 
 
 /*End of Customer Support*/

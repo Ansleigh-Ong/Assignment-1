@@ -13,12 +13,13 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Chewy&family=Fugaz+One&family=Playball&display=swap" rel="stylesheet">
+        <script src="support.js" async defer></script>
         <script src="app.js" async defer></script>
     </head>
     <body onload=checklogin()>
         <nav class="universal_nav">
             <ul id="no_dropdown">   <!--Creates a dropdown menu-->
-                <li class="menu-button"><a href="#" id="menu"><img class ="menu" src="pictures/menu.png" alt="menu"></a></li>
+                <li class="menu-button" onclick=DisplayDropdown()><a href="#" id="menu"><img class ="menu" src="pictures/menu.png" alt="menu"></a></li>
                 <li><a href="index.html" id ="logo"><img class="logo" src ="pictures/logo.png" alt="Cloverene"></a></li>
                 <li class="chewy-regular hide"><a href="about-us.html">About Us</a></li>
                 <li class="chewy-regular hide"><a href="support.html">Support</a></li>
@@ -73,37 +74,46 @@
                         <span>What payment methods are accepted?</span>
                     </div>
                     <div class="answer">
-                        <p>helloooooooooooooooooooo</p>
+                        <p>We accept Cash, Credit and or Debit Card.
+                            You can pay with Pisa, OwnerCard, UMEX, or aNETS. 
+                            For cash transactions, you would need to pay in-person and fill in the form for additional details.
+                        </p>
                     </div>
                 </li>
 
-                <li>
+                <li id="question2">
                     <div class="question">
                         <span class="arrow"></span>
                         <span>Online delivery fees</span>
                     </div>
                     <div class="answer">
-                        <p>hellooooooooooooooo</p>
+                        <p>Yes we do delivery for those orders done online. 
+                            For online orders, you can pay online with your card. And for cash payment, you will pay upfront when order is delivered. 
+                            There is a small delivery fee of $4 but it would be waved for orders exceeding $100.
+                        </p>
                     </div>
                 </li>
 
-                <li>
+                <li id="question3">
                     <div class="question">
                         <span class="arrow"></span>
-                        <span>Online delivery fees</span>
+                        <span>Is there international delivery</span>
                     </div>
                     <div class="answer">
-                        <p>we r rich</p>
+                        <p>No we do not do international delivery. Fresh flowers need the best conditions to bloom well.
+                            Fortunately, we are now going global!
+                             If you are interested in our products in other countries, please be paitent as We will be coming to you!
+                        </p>
                     </div>
                 </li>
 
-                <li>
+                <li id="question4">
                     <div class="question">
                         <span class="arrow"></span>
-                        <span>What payment methods are accepted?</span>
+                        <span>How to contact support for additional queries?</span>
                     </div>
                     <div class="answer">
-                        <p>helloooooooooooooooooooooooo</p>
+                        <p>You can contact our staff who regularly reply! Just contact us at <span><a href="#">+65 12345678</a></span>. If you do not get a reply, please try to email us at <span><a href="#">Cloverene.email.com</a></span></p>
                     </div>
                 </li>
             </ul>
@@ -119,6 +129,5 @@
                 <li class="chewy-regular"><a href="index.html" style="color:black">Shopping</a></li>
             </ul>
         </footer>
-
     </body>
 </html>
