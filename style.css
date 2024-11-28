@@ -435,7 +435,6 @@ to{
 .cardbox{
     width:100%;
     height:100%;
-    min-width: 30vh;
     display: flex;
     flex-direction: row;
     overflow-x: scroll;
@@ -444,6 +443,8 @@ to{
 }
 
 .card{
+    width: 240px;
+    min-width: 240px;
     height: 99%;
     border-radius:10%;
     border: 4px solid rgba(0, 0, 0, 0.195);
@@ -451,10 +452,8 @@ to{
 }
 
 .card img{
-    width:30vh;
-    max-width: 40vh;
+    width:100%;
     height:70%;
-    max-height: 100%;
     border-top-left-radius: 10%;
     border-top-right-radius: 10%;
 }
@@ -469,6 +468,14 @@ to{
 .text-box p{
     font-size: smaller;
     color: #727171cf;
+    width:100%;
+    height: 50%;
+    overflow-y: scroll;
+
+}
+
+.text-box p::-webkit-scrollbar{
+    display: none;
 }
 
 .text-box .price{
@@ -492,6 +499,7 @@ to{
     background-repeat: no-repeat;
     display:flex;
     align-items: center;
+
 }
 
 .sloganbox{
