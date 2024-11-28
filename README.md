@@ -1,5 +1,5 @@
 # Assignment-1
-Front end development Assignment 1 -Website
+Front end development Assignment 1 -Flower Website
 
 
 Design Idea: The website is going to be for a flower shop brand, allowing Customers to browse the flower shops’ catalogue before ordering. Users would be started on the “Shopping” page and other pages would be “About the company”, “Customer Support” and “Log in/ Sign Up” page. Functions would be a navigation bar or a dropdown menu if the screen is smaller, log in an Sign up page and a shopping page. Idea of design was like a flora/fauna theme, where it is coloured based on plants, hence green would be the main colour. Wanted to make a cheery and playful design with fonts like Chewy.
@@ -27,3 +27,12 @@ https://www.pinterest.com/pin/6051780743163684/
 
 https://pixabay.com/photos/bunch-of-flowers-bouquet-of-roses-3158351/
 Icons and Fonts obtained from https://fonts.google.com/icons
+
+
+https://www.pinterest.com/pin/AX-jQC83E39B4GSmcuv8EH1jCBUE-hDePPOkzQtGNzxLA4GcFZbw3CU/
+
+https://www.pinterest.com/pin/1125968680355257/
+
+https://www.pinterest.com/pin/3729612242972854/
+
+https://www.pinterest.com/pin/443675000785834673/
