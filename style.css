@@ -466,10 +466,16 @@ to{
     flex-direction: column;
 }
 
+.text-box p{
+    font-size: smaller;
+    color: #727171cf;
+}
+
 .text-box .price{
     margin-top: auto;
     text-align: right;
-
+    font-size: large;
+    color: red;
 }
 
 
