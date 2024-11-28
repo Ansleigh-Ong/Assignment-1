@@ -55,7 +55,7 @@ var products ={
 
     },
 
-    'plant' : {
+    'plants' : {
         'cactus' :{
             'plant1':{
                 'img':'pictures/products/cactus.jpeg',
@@ -65,12 +65,12 @@ var products ={
 
             'plant2':{
                 'img':'pictures/products/cactus.jpeg',
-                'name':'Soft Lavender Glow',
+                'name':'Small cactus',
                 'description': 'Another normal cactus',
                 'price': '$5.00'},
         },
 
-        'plants' :{
+        'indoor plants' :{
             'plant1':{
                 'img':'pictures/products/fern.jpeg',
                 'name':'Indoor fern',
@@ -85,7 +85,7 @@ var products ={
 
             'plant3':{
                 'img':'pictures/products/plantfern.jpeg',
-                'name':'BIgger indoor fern',
+                'name':'Bigger indoor fern',
                 'description': 'For bigger space andd bigger happiness',
                 'price': '$29.90'},
 
@@ -125,4 +125,62 @@ function showproducts(id, filter = null){
 
 showproducts('all');
 showproducts('flowers','flowers');
-showproducts('plants', 'plant');
+showproducts('plants', 'plants');
+
+
+document.getElementById('searching').addEventListener('input', function(){
+    searchinput();
+})
+
+document.getElementById('search-form').addEventListener('submit', function(){
+    event.preventDefault()
+    searchinput();
+})
+
+
+
+function searchinput(){
+    const input = document.getElementById('searching').value.toLowerCase();
+    const box = document.getElementById('searchbox')
+    box.classList.remove('invisible')
+    const containers = document.querySelector('.searchbox')
+    var html = ``
+
+    if (input===''){
+        box.classList.add('invisible')
+        return;
+    }
+
+    let found=false
+
+    for (let category in products){
+        for (let subcategory in products[category]){
+            for (let product in products[category][subcategory]){
+                var productfound = products[category][subcategory][product]
+
+
+
+                if (productfound.name.toLowerCase().includes(input)|| 
+                    productfound.description.toLowerCase().includes(input)||
+                    subcategory.toLowerCase().includes(input)|| category.toLowerCase().includes(input)){
+
+                        found=true
+
+                        html += `<div class="card">
+                                <img src="${productfound.img}" alt="picture">
+                                <div class="text-box">
+                                    <h3><b>${productfound.name}</b></h3>
+                                    <p>${productfound.description}</p>
+                                    <h6 class="price">${productfound.price}</h6>
+                                </div>
+                            </div>`
+                    }
+            }
+        }
+    }
+    if (!found){
+        html = `<h2>No products found </p>`
+    }
+
+    containers.innerHTML = html
+}
