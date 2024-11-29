@@ -551,6 +551,7 @@ body{
     display: flex;
     justify-content: space-evenly;
     margin-top: auto;
+    margin-bottom: 20px;
     width:100%;
     height: 30px;
     flex-shrink: 0;
@@ -590,8 +591,16 @@ body{
 
     .producttext{
         height:300px;
+        overflow-y: scroll;
     }
 
+    .producttext::-webkit-scrollbar{
+        display: none;
+    }
+
+    .producttext p{
+        margin-bottom: 20px;
+    }
     
 }
 
