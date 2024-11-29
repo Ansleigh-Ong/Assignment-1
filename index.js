@@ -161,8 +161,8 @@ function searchinput(){
 
 
                 if (productfound.name.toLowerCase().includes(input)|| 
-                    productfound.description.toLowerCase().includes(input)||
-                    subcategory.toLowerCase().includes(input)|| category.toLowerCase().includes(input)){
+                    subcategory.toLowerCase().includes(input)|| 
+                    category.toLowerCase().includes(input)){
 
                         found=true
 
@@ -184,3 +184,46 @@ function searchinput(){
 
     containers.innerHTML = html
 }
+
+let cardcontainers = document.querySelectorAll('.cardbox')
+
+cardcontainers.forEach((container) =>{
+
+    let cards = container.querySelectorAll('.card')
+
+    cards.forEach((card) => {
+        card.addEventListener('click', function(){
+            var name = card.querySelector('h3').innerText
+            var description = card.querySelector('p').innerText
+            var img = card.querySelector('img').src
+            var price = card.querySelector('h6').innerText
+            
+
+            const box = document.querySelector('.productbox')
+            var html =``
+
+            html = `<div class="product-img">
+                        <img src="${img}" alt="picture">
+                    </div>
+                    <div class="producttext">
+                        <h3><b>${name}</b></h3>
+                        <h6 class="price">${price}</h6>
+                        <p>${description}</p>
+                        <div class="product-button">
+                            <button id="cancel" type="submit" class="cancel">Cancel</button>
+                            <button id="order" type="submit" class="order">Order</button>
+                        </div>
+                    </div>`
+
+            box.innerHTML = html
+            document.querySelector('.selected-product').style.display = 'block';
+            document.querySelector('.main-body').style.display = 'none';
+
+            document.querySelector('#cancel').addEventListener('click', function() {
+            document.querySelector('.selected-product').style.display = 'none';
+            document.querySelector('.main-body').style.display = 'block';
+            })
+            
+        })
+    })
+})
