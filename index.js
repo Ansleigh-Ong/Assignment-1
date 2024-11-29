@@ -214,6 +214,7 @@ cardcontainers.forEach((container) =>{
                             <button id="order" type="submit" class="order">Order</button>
                         </div>
                         <p id='pop'>Page closes in 10 seconds. Redirecting you now</p>
+                        <p id='error'>You cannot buy whilst not logged in!</p>
                     </div>`
 
             box.innerHTML = html
@@ -226,12 +227,19 @@ cardcontainers.forEach((container) =>{
             })
             
             document.querySelector('#order').addEventListener('click', function() {
-                document.querySelector('#order').innerText = 'Order Placed!'
-                document.getElementById('pop').style.display = 'block'
+                var login = localStorage.getItem('login') 
 
-                setTimeout(function(){
-                    location.reload()
-                },10000)
+                if (login === 'false'){
+                    document.getElementById('error').style.display = 'block'
+                }
+                else{
+                    document.querySelector('#order').innerText = 'Order Placed!'
+                    document.getElementById('pop').style.display = 'block'
+
+                    setTimeout(function(){
+                        location.reload()
+                    },10000)
+                }
             })
         })
     })
