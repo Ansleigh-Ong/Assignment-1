@@ -213,6 +213,7 @@ cardcontainers.forEach((container) =>{
                             <button id="cancel" type="submit" class="cancel">Cancel</button>
                             <button id="order" type="submit" class="order">Order</button>
                         </div>
+                        <p id='pop'>Page closes in 10 seconds. Redirecting you now</p>
                     </div>`
 
             box.innerHTML = html
@@ -220,10 +221,18 @@ cardcontainers.forEach((container) =>{
             document.querySelector('.main-body').style.display = 'none';
 
             document.querySelector('#cancel').addEventListener('click', function() {
-            document.querySelector('.selected-product').style.display = 'none';
-            document.querySelector('.main-body').style.display = 'block';
+                document.querySelector('.selected-product').style.display = 'none';
+                document.querySelector('.main-body').style.display = 'block';
             })
             
+            document.querySelector('#order').addEventListener('click', function() {
+                document.querySelector('#order').innerText = 'Order Placed!'
+                document.getElementById('pop').style.display = 'block'
+
+                setTimeout(function(){
+                    location.reload()
+                },10000)
+            })
         })
     })
 })

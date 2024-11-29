@@ -595,6 +595,10 @@ body{
     transform: translateY(-2px);
 }
 
+#pop{
+    display: none;
+}
+
 @media (max-width:560px){
 
     .productbox{
