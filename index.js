@@ -5,7 +5,7 @@ var products ={
                 'flower1':{
                     'img':'pictures/products/lilac-flower.jpg',
                     'name':'Twilight Blossom',
-                    'description': 'Enchant your loved ones by this dazzling arrangment of flowers',
+                    'description': 'Enchant your loved ones by this dazzling arrangment of flowers. Made with 3 different types of flowers, from lilac to lilies. It is sure to make whomever you give this to smile.',
                     'price': '$29.90'},
 
                 'flower2':{
