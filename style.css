@@ -183,7 +183,6 @@ body{
     border-radius: 15px;
     display: flex;
     flex-direction: column; 
-    overflow: visible;
     align-self: center;
 }
 
