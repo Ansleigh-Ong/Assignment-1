@@ -100,11 +100,13 @@ var products ={
 
 }
 
+
+//Adds all of the items to their specifc section
 function showproducts(id, filter = null){
     const container = document.querySelector(`#${id} .cardbox`)
     var html = ``;
     Object.entries(products).forEach(([category,details]) =>{
-
+        //Checks if filter matches the categories to get the plants
         if (!filter || category=== filter){
             Object.entries(details).forEach(([type, subdetails]) => {
                 Object.entries(subdetails).forEach(([flower,content]) =>{
@@ -124,25 +126,25 @@ function showproducts(id, filter = null){
 };
 
 showproducts('all');
-showproducts('flowers','flowers');
+showproducts('flowers','flowers'); //Call the function
 showproducts('plants', 'plants');
+
 
 
 document.getElementById('searching').addEventListener('input', function(){
     searchinput();
 })
 
-document.getElementById('search-form').addEventListener('submit', function(){
+document.getElementById('search-form').addEventListener('submit', function(event){
     event.preventDefault()
     searchinput();
 })
-
-
+//Calls if user submits respond
 
 function searchinput(){
     const input = document.getElementById('searching').value.toLowerCase();
     const box = document.getElementById('searchbox')
-    box.classList.remove('invisible')
+    box.classList.remove('invisible') //toggles box to display related products
     const containers = document.querySelector('.searchbox')
     var html = ``
 
@@ -152,7 +154,7 @@ function searchinput(){
     }
 
     let found=false
-
+    //Runs through all variables in the whole dictionary
     for (let category in products){
         for (let subcategory in products[category]){
             for (let product in products[category][subcategory]){
@@ -166,7 +168,7 @@ function searchinput(){
                     category.toLowerCase().includes(input)){
 
                         found=true
-
+                        //Adds related products as cards to the box
                         html += `<div class="card">
                                 <img src="${productfound.img}" alt="picture">
                                 <div class="text-box">
@@ -181,24 +183,27 @@ function searchinput(){
     }
     if (!found){
         html = `<h2>No products found </p>`
-    }
+    } //If there is no products
 
     containers.innerHTML = html
 }
 
+
+//Function for when card is clicked
 let cardcontainers = document.querySelectorAll('.cardbox')
 
 cardcontainers.forEach((container) =>{
 
     let cards = container.querySelectorAll('.card')
 
+    //Runs through every card to add event listener
     cards.forEach((card) => {
         card.addEventListener('click', function(){
             var name = card.querySelector('h3').innerText
             var description = card.querySelector('p').innerText
             var img = card.querySelector('img').src
             var price = card.querySelector('h6').innerText
-            
+            //Get all product variables
 
             const box = document.querySelector('.productbox')
             var html =``
@@ -221,22 +226,27 @@ cardcontainers.forEach((container) =>{
             box.innerHTML = html
             document.querySelector('.selected-product').style.display = 'block';
             document.querySelector('.main-body').style.display = 'none';
+            //Show one giant card and toggle all the other smaller cards invisible
 
+            
+            //Inside specific card
             document.querySelector('#cancel').addEventListener('click', function() {
                 document.querySelector('.selected-product').style.display = 'none';
                 document.querySelector('.main-body').style.display = 'block';
-            })
+            }) //Toggle giant card off if cancel button is clicked
             
+
+            //If user wants to buy
             document.querySelector('#order').addEventListener('click', function() {
-                var login = localStorage.getItem('login') 
+                var login = localStorage.getItem('login') //Check user logged in or not
 
                 if (login === 'false'){
-                    document.getElementById('error').style.display = 'block'
+                    document.getElementById('error').style.display = 'block' //gets error if not log in
                 }
                 else{
                     document.querySelector('#order').innerText = 'Order Placed!'
                     document.getElementById('pop').style.display = 'block'
-
+                    //Change button text to order places and will reload the page after 5 seconds
                     setTimeout(function(){
                         location.reload()
                     },5000)

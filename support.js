@@ -8,3 +8,4 @@ for (let i = 0; i< questions.length;i++){
         arrows[i].classList.toggle('arrow-rotate');
     });
 }
+//Checks which arrow is clicked and toggles arrow and answer bar to open

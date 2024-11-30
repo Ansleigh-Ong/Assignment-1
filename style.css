@@ -20,7 +20,7 @@
     font-family: 'Times New Roman', Times, serif;
     font-style: normal;
 }
-
+/*Fonts*/
   
 
 body::-webkit-scrollbar{
@@ -42,6 +42,7 @@ body{
     width:100vw;
     height: 100vh;
 }
+/*Default for all pages*/
 
 .logo{
     width:125px;
@@ -55,6 +56,29 @@ body{
     padding:7px 5px;
 }
 
+.profile{
+    width:35px;
+    height:35px;
+    position: relative;
+}
+
+.log-out{
+    z-index: 999;
+    position: absolute;
+    right:1%;
+    top:8%;
+    background-color: white;
+    width: 20%;
+    height:70px;
+    box-shadow:inset 0 6px 0px 0 rgba(0,0,0,0.3);
+}
+
+.log-out a{
+    color:red;
+}
+/*All the icons styling*/
+
+/*Styling for navigation bar*/
 .universal_nav{
     min-height:fit-content;
     min-width: fit-content;
@@ -90,31 +114,13 @@ body{
     text-decoration: underline;
 }
 
+/*Positioning of logo and dropdown menu*/
 .universal_nav li:nth-child(2){
     margin-right: auto;
 }
 
 
-.profile{
-    width:35px;
-    height:35px;
-    position: relative;
-}
-
-.log-out{
-    z-index: 999;
-    position: absolute;
-    right:1%;
-    top:8%;
-    background-color: white;
-    width: 20%;
-    height:70px;
-    box-shadow:inset 0 6px 0px 0 rgba(0,0,0,0.3);
-}
-
-.log-out a{
-    color:red;
-}
+/*Dropdown menu styling*/
 .dropdown{
     position:fixed;
     top:0;
@@ -139,6 +145,7 @@ body{
     display:none;
 }
 
+/*Display dropdown menu icon if screen too small*/
 @media (max-width:533px){
     .hide{
         display:none
@@ -161,6 +168,8 @@ body{
 
 
 /*For the body of login and sign up page*/
+
+/*Style for main page*/
 .main{
     height: 100vh;
     display: flex;
@@ -186,7 +195,7 @@ body{
     align-self: center;
 }
 
-
+/*Form style*/
 .login{
     position: relative;
     background-color: white;
@@ -200,15 +209,12 @@ body{
     max-height: 500px;
     min-width: 200px;
     left:10%;
-    overflow: hidden;
+    overflow: hidden; /*Hides excess background*/
     justify-content: center;
 }
 
 
 /*Sets animated gradient border for the form*/
-
-
-
 .container::after{
     content: '';
     position: absolute;
@@ -235,7 +241,7 @@ body{
 }
 100%{
     transform: translate(-50%, -50%) rotate(360deg);
-}
+} /*Rotates a giant background while the form clips it*/
 
 }
 /*#################################################*/
@@ -255,6 +261,7 @@ body{
 
 }
 
+/*Same as login form style*/
 .sign{
     position: relative;
     background-color: white;
@@ -317,6 +324,7 @@ body{
 .form button[type="submit"]:hover{
     background-color: #d1d1d1;
 }
+/*####################################################*/
 
 @media (max-width: 600px){
     .bigcircle{
@@ -329,7 +337,7 @@ body{
         left:10px;
     }
 }
-
+/*Removes big circle on left and moves form to margin for smaller screens*/
 
 
 /*End of Login/SignUp page*/
@@ -337,6 +345,8 @@ body{
 
 /*Start of Shopping Page*/
 
+
+/*Search bar and product display*/
 .box{
     width:100%;
     padding:30px;
@@ -377,6 +387,26 @@ body{
     border:none;
 }
 
+.search-section{
+    margin:40px; 
+    height: 50vh;
+}
+
+.searchbox{
+    width:100%;
+    height:100%;
+    display: flex;
+    flex-direction: row;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    gap:8px;
+
+}
+/*#########################################*/
+
+
+
+/*Normal card category style*/
 .categories-container{
     width:100%;
     padding:10px 30px ;
@@ -413,21 +443,6 @@ body{
     display: none;
 }
 
-.search-section{
-    margin:40px; 
-    height: 50vh;
-}
-
-.searchbox{
-    width:100%;
-    height:100%;
-    display: flex;
-    flex-direction: row;
-    overflow-x: scroll;
-    scroll-snap-type: x mandatory;
-    gap:8px;
-
-}
 
 .cardbox{
     width:100%;
@@ -439,6 +454,7 @@ body{
     gap:8px;
 }
 
+/*product card style*/
 .card{
     width: 240px;
     min-width: 240px;
@@ -488,7 +504,10 @@ body{
     font-size: large;
     color: red;
 }
+/*###################################*/
 
+
+/*For the product user clicked on*/
 .main-body{
     display: block;
 }
@@ -611,6 +630,8 @@ body{
 
 /*Start of About Us page*/
 
+
+/*Banner style*/
 .banner-box{
     width:100vw;
     height:40vh;
@@ -637,8 +658,10 @@ body{
 .sloganbox h1{
     padding:15px;
 }
+/*###########*/
 
 
+/*History of company part styling*/
 .about-us{
     margin:5% 10%;
     display: flex;
@@ -688,8 +711,9 @@ body{
         height:fit-content;
     }
 }
+/*###########################*/
 
-
+/*Review section*/
 .review-section{
     width:80vw;
     height: 70vh;
@@ -775,6 +799,7 @@ body{
     padding-top:10px;
 }
 
+/*Add review section*/
 .review-add{
     width:100%;
     height:100%;
@@ -827,6 +852,7 @@ body{
 
 /*Start of Customer Support*/
 
+/*Customer support top portion styling*/
 .customer-support{
     display: flex;
     flex-direction: column;
@@ -853,8 +879,9 @@ body{
     text-align: center;
     max-width: 70%;
 }
+/*##############################*/
 
-
+/*List of Question style*/
 .freq-qns{
     display: flex;
     flex-direction: column;
@@ -883,8 +910,10 @@ body{
     text-decoration: underline;
 
 }
+/*#########################*/
 
 
+/*For each question and answer box style*/
 .faq-section{
     padding: 4em;
 }
@@ -943,6 +972,7 @@ body{
 
 /*End of Customer Support*/
 
+/*General footer style for all pages*/
 .footer{
     height: auto;   
     background-color: black;

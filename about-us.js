@@ -6,6 +6,9 @@ function back(container,scrolldist){
     container.scrollBy({left: scrolldist, behavior: "smooth"})
 }
 
+
+//Buttons to move the reviews around
+
 document.querySelector('#right-button').addEventListener('click', function(){
     const container = document.querySelector('.review-box')
     next(container,200);
@@ -16,6 +19,7 @@ document.querySelector('#left-button').addEventListener('click', function(){
     back(containers,-200);
 })
 
+//########################################################
 var dict_stars ={
     '1star':'★',
     '2star':'★★',
@@ -61,6 +65,7 @@ function showreviews(){
     
     const container = document.querySelector('.review-box')
     var html = ``
+    //Gets each variable in the dictionary and add another card
     Object.entries(dict_rating).forEach(([username, details]) => {
         const stars = dict_stars[details['Rating']]
         html += `<div class="review">
@@ -86,8 +91,9 @@ showreviews()
 //Review form
 function GetReview(){
     const container = document.querySelector('.review-box')
-    const last_child = container.lastElementChild;
+    const last_child = container.lastElementChild;  //Always gets last child as add review is always last
 
+    //Displays the review form
     var html_form =`<form class="review-form">
                             <label for="username">Username:</label>
                             <input type="text" id="username" placeholder="Enter username" required>
@@ -125,6 +131,6 @@ function GetReview(){
             'Comment': textreview,
         }
         showreviews();
-        localStorage.setItem('dict_rating',JSON.stringify(dict_rating));
+        localStorage.setItem('dict_rating',JSON.stringify(dict_rating)); //Adds the new review into the dictionary to display later on (if user leaves page)
     })
 }
