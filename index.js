@@ -5,7 +5,7 @@ var products ={
                 'flower1':{
                     'img':'pictures/products/lilac-flower.jpg',
                     'name':'Twilight Blossom',
-                    'description': 'Enchant your loved ones by this dazzling arrangment of flowers. Made with 3 different types of flowers, from lilac to lilies. It is sure to make whomever you give this to smile.',
+                    'description': 'Enchant your loved ones with this dazzling arrangment of flowers. Made with 3 different types of flowers, from lilac to lilies. It is sure to make whomever you give this to smile.',
                     'price': '$29.90'},
 
                 'flower2':{
@@ -86,7 +86,7 @@ var products ={
             'plant3':{
                 'img':'pictures/products/plantfern.jpeg',
                 'name':'Bigger indoor fern',
-                'description': 'For bigger space andd bigger happiness. This plant is huge, recommending large spaces for it to grow. This pot of plant is sure to bring the nature to you.',
+                'description': 'For bigger space and bigger happiness. This plant is huge, recommending large spaces for it to grow. This pot of plant is sure to bring the nature to you.',
                 'price': '$39.90'},
 
             'plant4':{
