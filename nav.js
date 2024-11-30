@@ -11,21 +11,6 @@ function CloseDropdown(){
     side.style.display = 'none'
 }
 
-function Signup(){
-    const login = document.querySelector('.login')
-    login.style.display = 'none'
-
-    const singup = document.querySelector('.sign')
-    singup.style.display = 'flex'
-}
-
-function Login(){
-    const login = document.querySelector('.login')
-    login.style.display = 'flex'
-
-    const singup = document.querySelector('.sign')
-    singup.style.display = 'none'  
-}
 
 
 document.querySelector('#profile').addEventListener('click', function(){
@@ -40,12 +25,7 @@ document.querySelector('#logout').addEventListener('click', function(){
   
 })
 
-function setlogin(){
-    document.querySelector('#buttonlog').classList.add('invisible')
-    document.querySelector('#profile').classList.remove('invisible')
-    localStorage.setItem('login','true')
 
-}
 
 function checklogin(){
     if (login === false){

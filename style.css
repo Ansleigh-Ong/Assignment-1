@@ -266,8 +266,10 @@ body{
     height: 100%;
     max-width: 400px;
     max-height: 500px;
-    min-width:300px;
+    min-width: 200px;
     left:10%;
+    overflow: hidden;
+    justify-content: center;
 }
 
 .container header, .container header{
@@ -304,7 +306,7 @@ body{
 .form a{
     text-decoration: none;
 }
-.form button[type="button"]{
+.form button[type="submit"]{
     height:13%;
     width:98%;
     background-color: #b4b4b4;
@@ -312,7 +314,7 @@ body{
     border-radius: 25px;
 }
 
-.form button[type="button"]:hover{
+.form button[type="submit"]:hover{
     background-color: #d1d1d1;
 }
 
