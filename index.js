@@ -11,19 +11,19 @@ var products ={
                 'flower2':{
                     'img':'pictures/products/lily-sunflower.jpeg',
                     'name':'Soft Lavender Glow',
-                    'description': 'Soft flowers for solid aesthetic vibes',
+                    'description': 'Soft flowers for solid aesthetic vibes. With small and freshed-scented flowers, it is guaranteed to make your room aesthetic glow.',
                     'price': '$69.00'},
 
                 'flower3':{
                     'img':'pictures/products/lilac-flower.jpg',
                     'name':'Lilac Meadow Magic',
-                    'description': 'Arrangment of flowers',
+                    'description': 'Arrangment of flowers made for you. Freshly picked from the flower fields, this bouquet is sure to make you feel like your on holiday!',
                     'price': '$34.99'},
 
                 'flower4':{
                     'img':'pictures/products/daisy.jpeg',
                     'name':'Hearts in Bloom',
-                    'description': 'Flowers to brighten their smile',
+                    'description': 'Flowers to brighten their smile. Made with sunflowers and other flowers, this makes a perfect gift!',
                     'price': '$89.99'},
             },
 
@@ -31,25 +31,25 @@ var products ={
                 'flower1':{
                     'img':'pictures/products/roses.jpeg',
                     'name':'Petal Dreams',
-                    'description': 'Modern arrangment of flowers for flowery vibes',
+                    'description': 'Modern arrangment of flowers for flowery vibes. Perfect for a pleasant gift to you endear ones.',
                     'price': '$90.90'},
 
                 'flower2':{
                     'img':'pictures/products/lilac-flower.jpg',
                     'name':'Sweet Blooming',
-                    'description': 'Enchant your loved ones by this dazzling arrangment of flowers',
+                    'description': 'Enchant your loved ones by this dazzling arrangment of flowers. These flowers are delivered just as they are blooming, making the gift process even more special!',
                     'price': '$19.90'},
 
                 'flower3':{
                     'img':'pictures/products/sunflower.jpeg',
                     'name':'Golden Bloom',
-                    'description': 'Bloom smiles as gold as these flowers',
+                    'description': 'Bloom smiles as gold as these flowers. Gathered from the fields of sunflowers and daisies, these flowers represent the bright outlook on the future. Perfect for those whom you want to spend your time with.',
                     'price': '$69.90'},
 
                 'flower4':{
                     'img':'pictures/products/daisy.jpeg',
                     'name':'Dewy Dawn Roses',
-                    'description': 'Enchanting flowers to attract them',
+                    'description': 'Enchanting flowers to attract them. Featuring all types of roses, this gift is made for those you truely love! This bouquet is specially made all year round for you to give to that special someone!',
                     'price': '$79.90'},
             },
 
@@ -60,13 +60,13 @@ var products ={
             'plant1':{
                 'img':'pictures/products/cactus.jpeg',
                 'name':'Cactus',
-                'description': 'Just a normal cactus',
+                'description': 'Just a normal cactus. This little prickly guy may be small but it sure can last. Without needing to be watered daily, this plant can be perfect for those who do not want daily commitments.',
                 'price': '$9.90'},
 
             'plant2':{
                 'img':'pictures/products/cactus.jpeg',
                 'name':'Small cactus',
-                'description': 'Another normal cactus',
+                'description': 'Another normal cactus. Bunches of cactus grows from it, creating a small cactus field!',
                 'price': '$5.00'},
         },
 
@@ -74,25 +74,25 @@ var products ={
             'plant1':{
                 'img':'pictures/products/fern.jpeg',
                 'name':'Indoor fern',
-                'description': 'Plant for indoor purposes',
+                'description': 'Plant for indoor purposes. It can be used for adding to your room aesthetics or just to show off you nature spirit.',
                 'price': '$90.90'},
 
             'plant2':{
                 'img':'pictures/products/bamboo.jpeg',
                 'name':'Good luck bamboo',
-                'description': 'For good luck and good environment',
+                'description': 'For good luck and good environment. For those that believe in fortune, this bamboo represents being strong in faces of adversity, giving you good spirit and luck.',
                 'price': '$19.90'},
 
             'plant3':{
                 'img':'pictures/products/plantfern.jpeg',
                 'name':'Bigger indoor fern',
-                'description': 'For bigger space andd bigger happiness',
-                'price': '$29.90'},
+                'description': 'For bigger space andd bigger happiness. This plant is huge, recommending large spaces for it to grow. This pot of plant is sure to bring the nature to you.',
+                'price': '$39.90'},
 
             'plant4':{
                 'img':'pictures/products/fern.jpeg',
                 'name':'Fern box',
-                'description': 'Box of ferns to grow',
+                'description': 'Box of ferns to grow your spirits. These plants spread really quickly, growing sprouts like nothing you have seen before! You can have your little garden in no time!',
                 'price': '$15.90'},
         },
 
@@ -160,7 +160,8 @@ function searchinput(){
 
 
 
-                if (productfound.name.toLowerCase().includes(input)|| 
+                if (productfound.name.toLowerCase().includes(input)||
+                    productfound.description.toLowerCase().includes(input)|| 
                     subcategory.toLowerCase().includes(input)|| 
                     category.toLowerCase().includes(input)){
 
@@ -213,7 +214,7 @@ cardcontainers.forEach((container) =>{
                             <button id="cancel" type="submit" class="cancel">Cancel</button>
                             <button id="order" type="submit" class="order">Order</button>
                         </div>
-                        <p id='pop'>Page closes in 10 seconds. Redirecting you now</p>
+                        <p id='pop'>Page closes in 5 seconds. Redirecting you now</p>
                         <p id='error'>You cannot buy whilst not logged in!</p>
                     </div>`
 
@@ -238,7 +239,7 @@ cardcontainers.forEach((container) =>{
 
                     setTimeout(function(){
                         location.reload()
-                    },10000)
+                    },5000)
                 }
             })
         })
