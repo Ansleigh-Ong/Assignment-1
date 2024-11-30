@@ -14,7 +14,7 @@ function CloseDropdown(){
 
 //Allows user to log out
 document.querySelector('#profile').addEventListener('click', function(){
-    document.querySelector('#signout').classList.remove('invisible')
+    document.querySelector('#signout').classList.toggle('invisible')
 })
 
 document.querySelector('#logout').addEventListener('click', function(){

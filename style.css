@@ -62,20 +62,7 @@ body{
     position: relative;
 }
 
-.log-out{
-    z-index: 999;
-    position: absolute;
-    right:1%;
-    top:8%;
-    background-color: white;
-    width: 20%;
-    height:70px;
-    box-shadow:inset 0 6px 0px 0 rgba(0,0,0,0.3);
-}
 
-.log-out a{
-    color:red;
-}
 /*All the icons styling*/
 
 /*Styling for navigation bar*/
@@ -119,6 +106,21 @@ body{
     margin-right: auto;
 }
 
+/*Log out button*/
+.log-out{
+    z-index: 999;
+    position: absolute;
+    right:1%;
+    top:8%;
+    background-color: white;
+    width: 20%;
+    height:70px;
+    box-shadow:inset 0 6px 0px 0 rgba(0,0,0,0.3);
+}
+
+.log-out a{
+    color:red;
+}
 
 /*Dropdown menu styling*/
 .dropdown{
