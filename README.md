@@ -1,6 +1,6 @@
 # Front-End Development Assignment 1: Website – Online Flower Shop
 
-The website is for a flower shop brand named **‘Cloverene’**, allowing customers to browse the flower shop's catalogue before ordering. Users can browse through the flower catalogue before ordering. Users need to log in to purchase items. Other pages like **About Us** and **Support** enhance the user experience and give the brand a positive image.
+The website is for a flower shop brand named **‘Cloverene’**, allowing customers to browse the flower shop's catalogue before ordering. Users can browse through the flower catalogue before ordering. Users need to log in to purchase items. The rest of the pages like **About-Us** and **Support** is to enhance user experience in the website while giving the brand a good image. 
 
 ---
 
@@ -8,8 +8,8 @@ The website is for a flower shop brand named **‘Cloverene’**, allowing custo
 
 Since it is a flower shop, I decided to go for a flora theme, matching the color scheme with green and brown, symbolizing flowers and pollen colors. For the logo, I created a simple design featuring the name paired with a clover, symbolizing good luck and leaving a positive impression.
 
-- **User Perspective**: Users start at the shopping page for easy access to products. 
-- **Brand Perspective**: Pages like **About Us** and **Support** aim to enhance the brand's image.
+- **User Perspective**: Users start at the shopping page for easy access to products. User can see all the good things about the brand when in other pages like **About Us**
+- **Brand Perspective**: Pages like **About Us** and **Support** help enhance the brand's image so that customers are more willing to spend their money on their products.
 
 This is the wireframe link for the website concept: [Figma Wireframe](https://www.figma.com/design/5dtOQrLlB0uaU4TUnZRgpX/Website-draft?node-id=112-2&t=2F00gxkFHdNmMliC-14)
 
@@ -17,10 +17,10 @@ This is the wireframe link for the website concept: [Figma Wireframe](https://ww
 
 ## Current Features:
 
-- **Dropdown Menu**: For users on smaller screens to navigate pages.
-- **Login and Sign-Up Pages**: Forms for users to log in or sign up to purchase products.
-- **Review Section**: Available on the **About Us** page, where users can browse reviews and leave their own via a review form.
-- **Dropdown FAQ Box**: Found on the **Support** page, users can view FAQs and brand contact information.
+- **Dropdown Menu**: For users on smaller screens to navigate pages on the navigation bar.
+- **Login and Sign-Up Pages**: Forms for users to log in or sign up so that they can purchase products.
+- **Review Section**: Found on the **About Us** page, where users can browse reviews and leave their own using the review form.
+- **Dropdown FAQ Box**: Found on the **Support** page, users can view **Frequently Asked Questions** and brand contact information to get further answers.
 - **Search Bar**: Located on the **Shopping/Main** page, allowing users to search for available products.
 - **Product Cards**: Products are clickable for viewing and ordering (if logged in).
 
@@ -29,35 +29,42 @@ This is the wireframe link for the website concept: [Figma Wireframe](https://ww
 ## Testing:
 
 ### Login Form:
-1. Navigate to the **Login** page.
-2. Submit an empty form to verify the error message.
-3. Submit a form with invalid credentials to verify the error message.
-4. Submit a valid form to ensure the login button changes to a profile icon.
+1. Go to “Login” page
+2. Try to submit empty form and verify error message is displayed.
+3. Try to submit form with an invalid email or password and verify an error message is displayed
+4. Try to submit a valid form and verify the login button is replace with profile icon
+
 
 ### Sign-Up Form:
-1. Navigate to the **Login** page and click **Sign Up**.
-2. Submit a form with mismatched passwords to verify the error message.
-3. Submit a valid form to return to the login page.
+1. Go to “Login” page
+2. Click on “Sign Up” in the form and verify form changed from log in to sign up form
+3. Submit a form with mismatched passwords and verify an error message is displayed.
+4. Submit a valid form and verify the page returns to the login form page.
 
 ### Review Form:
-1. Navigate to the **About Us** page.
-2. Scroll to the review section and test buttons for review scrolling.
-3. Add a review to verify it appears at the end of the review list.
+1. Go to “About Us” page
+2. Scroll to bottom of page to review section
+3. Test the buttons and verify reviews scroll accordingly
+4. Scroll to the last review and click on plus icon and see the review form display
+5. Write a review and verify the review is added to the last place of the review section
 
 ### Dropdown FAQ Box:
-1. Navigate to the **Support** page.
-2. Click questions to verify answers are displayed.
+1. Go to “Support” page
+2. Click on any question in the list and page takes you to the question
+3. Try to click on the boxes and verify that answer is displayed
 
 ### Search Bar:
-1. Navigate to the **Shopping/Main** page or click the logo.
-2. Search for products to verify relevant results are displayed.
-3. Search for nonexistent products to verify an error message appears.
+1. Go to “Login” page or Click the logo.
+2. Click on search bar and search for an item (etc lilac, sunflower, roses)
+3. Verify that products are shown on the first row as “Searched Products”
+4. Try to search for a non-existing product and see that an error message is displayed
 
 ### Product Cards:
-1. Click on a product to display its full details.
-2. Click **Cancel** to return to the previous page.
-3. Attempt to order without logging in to verify the error message.
-4. Order while logged in to verify button text changes to "Order Placed" and the page redirects.
+1. Go to “Login” page
+2. Click on a product and verify the product is displayed fully on the screen
+3. Try to click “Cancel” button and verify user returns to original page
+4. Try to click “Order” while not logged in and verify error message displays
+5. Try to click “Order” while logged in and verify button text changes to “Order Placed” and page redirects back to main page after five seconds
 
 ---
 
