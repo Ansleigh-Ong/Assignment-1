@@ -145,7 +145,7 @@ function searchinput(){
     const input = document.getElementById('searching').value.toLowerCase();
     const box = document.getElementById('searchbox')
     box.classList.remove('invisible') //toggles box to display related products
-    const containers = document.querySelector('.searchbox')
+    const containers = box.querySelector('.cardbox')
     var html = ``
 
     if (input===''){
@@ -191,11 +191,12 @@ let cardcontainers = document.querySelectorAll('.cardbox')
 
 cardcontainers.forEach((container) =>{
 
-    let cards = container.querySelectorAll('.card')
-
-    //Runs through every card to add event listener
-    cards.forEach((card) => {
-        card.addEventListener('click', function(){
+    container.addEventListener('click', function(event){
+        var card = event.target.closest('.card')
+        if (!card){
+            return;
+        }//Runs through every card to add event listener
+    
             var name = card.querySelector('h3').innerText
             var description = card.querySelector('p').innerText
             var img = card.querySelector('img').src
@@ -249,4 +250,4 @@ cardcontainers.forEach((container) =>{
             })
         })
     })
-})
+
