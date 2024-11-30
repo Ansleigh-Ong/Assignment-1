@@ -6,9 +6,7 @@ function back(container,scrolldist){
     container.scrollBy({left: scrolldist, behavior: "smooth"})
 }
 
-
 //Buttons to move the reviews around
-
 document.querySelector('#right-button').addEventListener('click', function(){
     const container = document.querySelector('.review-box')
     next(container,200);
@@ -98,8 +96,6 @@ function GetReview(){
                             <label for="username">Username:</label>
                             <input type="text" id="username" placeholder="Enter username" required>
                         
-
-                            
                             <label for="username">Rating:</label>
                             <select id="rating">
                                 <option value="1star">1</option>
@@ -108,9 +104,7 @@ function GetReview(){
                                 <option value="4star">4</option>
                                 <option value="5star">5</option>
                             </select>
-                        
 
-                            
                             <label for="text-review">Write Review:</label>
                             <textarea id="text-review" rows=7 placeholder="Enter comments"></textarea>
                             <br>

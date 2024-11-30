@@ -1,7 +1,6 @@
 //Login system for nav bar (checks if user is still log in or not)
 var login = localStorage.getItem('login') === 'true';
 
-
 //Dropdown menu only for smaller screens
 function DisplayDropdown(){
     const side = document.querySelector('.dropdown')
@@ -12,7 +11,6 @@ function CloseDropdown(){
     const side = document.querySelector('.dropdown')
     side.style.display = 'none'
 }
-
 
 //Allows user to log out
 document.querySelector('#profile').addEventListener('click', function(){
@@ -26,7 +24,6 @@ document.querySelector('#logout').addEventListener('click', function(){
     localStorage.setItem('login','false')
   
 })
-
 
 //Check if logged in for every page to see if profile pic is on or off
 function checklogin(){

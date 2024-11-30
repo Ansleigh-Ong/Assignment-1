@@ -1,5 +1,4 @@
 
-
 //Switch from the 2 log in and sign out forms
 document.querySelector('#signupbutton').addEventListener('click',function Signup(){
     const login = document.querySelector('.login')

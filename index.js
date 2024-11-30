@@ -130,7 +130,6 @@ showproducts('flowers','flowers'); //Call the function
 showproducts('plants', 'plants');
 
 
-
 document.getElementById('searching').addEventListener('input', function(){
     searchinput();
 })
@@ -160,8 +159,6 @@ function searchinput(){
             for (let product in products[category][subcategory]){
                 var productfound = products[category][subcategory][product]
 
-
-
                 if (productfound.name.toLowerCase().includes(input)||
                     productfound.description.toLowerCase().includes(input)|| 
                     subcategory.toLowerCase().includes(input)|| 
@@ -187,7 +184,6 @@ function searchinput(){
 
     containers.innerHTML = html
 }
-
 
 //Function for when card is clicked
 let cardcontainers = document.querySelectorAll('.cardbox')
@@ -228,14 +224,12 @@ cardcontainers.forEach((container) =>{
             document.querySelector('.main-body').style.display = 'none';
             //Show one giant card and toggle all the other smaller cards invisible
 
-            
             //Inside specific card
             document.querySelector('#cancel').addEventListener('click', function() {
                 document.querySelector('.selected-product').style.display = 'none';
                 document.querySelector('.main-body').style.display = 'block';
             }) //Toggle giant card off if cancel button is clicked
             
-
             //If user wants to buy
             document.querySelector('#order').addEventListener('click', function() {
                 var login = localStorage.getItem('login') //Check user logged in or not
