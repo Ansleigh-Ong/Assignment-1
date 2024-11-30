@@ -130,6 +130,7 @@ showproducts('flowers','flowers'); //Call the function
 showproducts('plants', 'plants');
 
 
+
 document.getElementById('searching').addEventListener('input', function(){
     searchinput();
 })
